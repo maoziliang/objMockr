@@ -57,13 +57,13 @@ mocks.manyOf = function (arr, minimum, maximum) {
 /**
  * 最多重复n次执行tpl表示的mock方法，用于根据对象模板生成数组
  * @param  {Mock} tpl     要重复执行的mock方法
- * @param  {integer} mostTimes 次数
+ * @param  {integer} maximum 次数
  * @return {Array}           重复执行n次tpl的结果数据
  */
-mocks.repeatMost = function (tpl, mostTimes) {
+mocks.repeatMost = function (tpl, maximum) {
   var thiz = this;
   return function () {
-    var times = thiz.number(1, mostTimes)();
+    var times = thiz.number(1, maximum)();
     return thiz.repeat(tpl, times)();
   };
 };
