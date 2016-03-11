@@ -1,0 +1,35 @@
+{
+  "name": "objmockr",
+  "version": "1.0.0",
+  "description": "Javascript literal object mocker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maoziliang/objMockr.git"
+  },
+  "keywords": [
+    "mock",
+    "mocker",
+    "mockr",
+    "json",
+    "generate",
+    "fake",
+    "faker"
+  ],
+  "author": "mozily@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maoziliang/objMockr/issues"
+  },
+  "homepage": "https://github.com/maoziliang/objMockr#readme",
+  "dependencies": {
+    "faker": "^3.0.1"
+  },
+  "devDependencies": {
+    "lodash": "^4.6.1",
+    "moment": "^2.12.0"
+  }
+}
