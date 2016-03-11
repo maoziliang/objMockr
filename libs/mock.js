@@ -168,13 +168,18 @@ mocks.exec = function (tpl) {
 
 /**
  * 创建一个mocker
- * @param  {Array} locales ['zh-cn', 'en-us']
+ * @param  {Array<string>} locales? ['zh-cn', 'en-us']
+ * @param  {Array<object>} customMocks? [YourCustomMocker]
  * @return {Object}         根据locales生成的mocker对象
  */
-exports.createMocker = function (locales) {
+exports.createMocker = function (locales, customMocks) {
   var result = _.extend({}, require('./normal'));
   _.forEach(locales, function (locale) {
     _.extend(result, require('./localeMocks/' + locale));
+  });
+
+  _.forEach(customMocks, function (custom) {
+    _.extend(result, custom);
   });
   return _.extend({}, mocks, result);
 };
